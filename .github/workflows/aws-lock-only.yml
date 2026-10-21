@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: aws-actions/configure-aws-credentials@v4.3.1
         with: { aws-region: ap-south-1, role-to-assume: arn:aws:iam::000000000000:role/none }
-      - uses: aws-actions/aws-secretsmanager-get-secrets@v2.0.10
+      - uses: aws-actions/aws-secretsmanager-get-secrets@v3.0.2
         with: { secret-ids: dummy }
       - uses: aws-actions/amazon-ecr-login@v2.1.7
   never-runs-new:
