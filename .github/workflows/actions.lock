@@ -4,7 +4,7 @@
 version: 'v0.0.3'
 workflows:
     '.github/workflows/approval.yaml':
-        - 'trstringer/manual-approval@v1.13.1'
+        - 'trstringer/manual-approval@v1.13.0'
     '.github/workflows/aws-lock-only.yml':
         - 'aws-actions/amazon-ecr-login@v2.1.7'
         - 'aws-actions/aws-secretsmanager-get-secrets@v2.0.10'
@@ -12,12 +12,17 @@ workflows:
         - 'aws-actions/configure-aws-credentials@v4.3.1'
         - 'aws-actions/configure-aws-credentials@v6.3.0'
     '.github/workflows/ci.yaml':
-        - 'actions/checkout@v4.4.0'
+        - 'actions/cache@v4.3.0'
         - 'actions/setup-go@v5.6.0'
         - 'astral-sh/setup-uv@v8.3.2'
     '.github/workflows/lockfile-check.yml':
         - 'actions/checkout@v4.4.0'
 dependencies:
+    'actions/cache@v4.3.0':
+        ref: 'v4.3.0'
+        commit: 'sha1-0057852bfaa89a56745cba8c7296529d2fc39830'
+        owner_id: 44036562
+        repo_id: 215566462
     'actions/checkout@v4.4.0':
         ref: 'v4.4.0'
         commit: 'sha1-11d5960a326750d5838078e36cf38b85af677262'
@@ -58,8 +63,8 @@ dependencies:
         commit: 'sha1-e1253824e5c10ff9df46874f81ed3ec929e19cfd'
         owner_id: 57468012
         repo_id: 220391287
-    'trstringer/manual-approval@v1.13.1':
-        ref: 'v1.13.1'
-        commit: 'sha1-fa642940caf8412403569b28b2db4a1df08a83a3'
+    'trstringer/manual-approval@v1.13.0':
+        ref: 'v1.13.0'
+        commit: 'sha1-fc798f7f1a16a3fe344efb8678a8201e9134e4d1'
         owner_id: 1445483
         repo_id: 473819360
