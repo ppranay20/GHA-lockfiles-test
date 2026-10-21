@@ -1,0 +1,18 @@
+name: Approval
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: trstringer/manual-approval@v1.13.1
+        with:
+          secret: ${{ github.token }}
+          approvers: <YOUR_GITHUB_USERNAME>
+          minimum-approvals: 1
+      - run: echo "approved"

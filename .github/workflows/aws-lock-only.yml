@@ -1,0 +1,26 @@
+name: AWS lock-only
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  never-runs:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v4.3.1
+        with: { aws-region: ap-south-1, role-to-assume: arn:aws:iam::000000000000:role/none }
+      - uses: aws-actions/aws-secretsmanager-get-secrets@v2.0.10
+        with: { secret-ids: dummy }
+      - uses: aws-actions/amazon-ecr-login@v2.1.7
+  never-runs-new:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v6.3.0
+        with: { aws-region: ap-south-1, role-to-assume: arn:aws:iam::000000000000:role/none }
+      - uses: aws-actions/aws-secretsmanager-get-secrets@v3.0.2
+        with: { secret-ids: dummy }
