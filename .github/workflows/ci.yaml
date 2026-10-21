@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.4.0
+      - uses: actions/cache@v4
       - uses: astral-sh/setup-uv@v8.3.2
       - uses: $/.github/actions/setup-tools
       - run: uv --version && go version

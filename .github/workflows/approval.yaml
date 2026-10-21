@@ -10,7 +10,7 @@ jobs:
   approve:
     runs-on: ubuntu-latest
     steps:
-      - uses: trstringer/manual-approval@v1.13.1
+      - uses: trstringer/manual-approval@v1.13.0
         with:
           secret: ${{ github.token }}
           approvers: <YOUR_GITHUB_USERNAME>
