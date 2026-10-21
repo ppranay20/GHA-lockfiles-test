@@ -3,8 +3,6 @@
 # Docs: https://gh.io/actions-lockfile
 version: 'v0.0.3'
 workflows:
-    '.github/workflows/actions.yaml':
-        - 'actions/setup-go@v5.6.0'
     '.github/workflows/approval.yaml':
         - 'trstringer/manual-approval@v1.13.1'
     '.github/workflows/aws-lock-only.yml':
@@ -13,13 +11,28 @@ workflows:
         - 'aws-actions/aws-secretsmanager-get-secrets@v3.0.2'
         - 'aws-actions/configure-aws-credentials@v4.3.1'
         - 'aws-actions/configure-aws-credentials@v6.3.0'
-    '.github/workflows/ci.yaml': []
+    '.github/workflows/ci.yaml':
+        - 'actions/checkout@v4.4.0'
+        - 'actions/setup-go@v5.6.0'
+        - 'astral-sh/setup-uv@v8.3.2'
+    '.github/workflows/lockfile-check.yml':
+        - 'actions/checkout@v4.4.0'
 dependencies:
+    'actions/checkout@v4.4.0':
+        ref: 'v4.4.0'
+        commit: 'sha1-11d5960a326750d5838078e36cf38b85af677262'
+        owner_id: 44036562
+        repo_id: 197814629
     'actions/setup-go@v5.6.0':
         ref: 'v5.6.0'
         commit: 'sha1-40f1582b2485089dde7abd97c1529aa768e1baff'
         owner_id: 44036562
         repo_id: 192624594
+    'astral-sh/setup-uv@v8.3.2':
+        ref: 'v8.3.2'
+        commit: 'sha1-11f9893b081a58869d3b5fccaea48c9e9e46f990'
+        owner_id: 115962839
+        repo_id: 846733598
     'aws-actions/amazon-ecr-login@v2.1.7':
         ref: 'v2.1.7'
         commit: 'sha1-03f1aad4c6c7ffd436567f42f9384779290529bd'
