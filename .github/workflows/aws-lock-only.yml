@@ -15,7 +15,7 @@ jobs:
         with: { aws-region: ap-south-1, role-to-assume: arn:aws:iam::000000000000:role/none }
       - uses: aws-actions/aws-secretsmanager-get-secrets@v2.0.10
         with: { secret-ids: dummy }
-      - uses: aws-actions/amazon-ecr-login@v2.1.7
+      - uses: aws-actions/amazon-ecr-login@v2.2.0
   never-runs-new:
     if: false
     runs-on: ubuntu-latest
