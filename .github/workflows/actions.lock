@@ -6,7 +6,7 @@ workflows:
     '.github/workflows/approval.yaml':
         - 'trstringer/manual-approval@v1.13.1'
     '.github/workflows/aws-lock-only.yml':
-        - 'aws-actions/amazon-ecr-login@v2.1.7'
+        - 'aws-actions/amazon-ecr-login@v2.2.0'
         - 'aws-actions/aws-secretsmanager-get-secrets@v2.0.10'
         - 'aws-actions/aws-secretsmanager-get-secrets@v3.0.2'
         - 'aws-actions/configure-aws-credentials@v4.3.1'
@@ -33,9 +33,9 @@ dependencies:
         commit: 'sha1-11f9893b081a58869d3b5fccaea48c9e9e46f990'
         owner_id: 115962839
         repo_id: 846733598
-    'aws-actions/amazon-ecr-login@v2.1.7':
-        ref: 'v2.1.7'
-        commit: 'sha1-03f1aad4c6c7ffd436567f42f9384779290529bd'
+    'aws-actions/amazon-ecr-login@v2.2.0':
+        ref: 'v2.2.0'
+        commit: 'sha1-7290e214a610b32bc0eef81748948b6d466a8783'
         owner_id: 57468012
         repo_id: 220389860
     'aws-actions/aws-secretsmanager-get-secrets@v2.0.10':
